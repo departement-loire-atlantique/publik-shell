@@ -10,10 +10,8 @@ apt update
 apt install -y vim gettext wget nginx-full quilt gnupg git zip
 
 # APT SOURCES
-echo "deb http://httpredir.debian.org/debian buster main" > /etc/apt/sources.list.d/publik.list 
-echo "deb http://ftp.fr.debian.org/debian buster-updates main" >> /etc/apt/sources.list.d/publik.list 
-echo "deb http://ftp.fr.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/publik.list 
-echo "deb http://deb.entrouvert.org/ buster main" >> /etc/apt/sources.list.d/publik.list 
+echo 'deb http://deb.debian.org/debian/ buster-backports main' > /etc/apt/sources.list.d/backports.list
+echo 'deb http://deb.entrouvert.org/ buster main' > /etc/apt/sources.list.d/entrouvert.list
 wget -q -O- https://deb.entrouvert.org/entrouvert.gpg | apt-key add -
 
 # configurations particulières de apt pour EO
