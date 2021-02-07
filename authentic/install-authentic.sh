@@ -6,9 +6,9 @@ set -eu
 DIR_AUTHENTIK="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Authentic 2
-apt-get update \
-    && apt-get -t stretch-backports install -y python3-attr \
-    && apt-get install -y authentic2-multitenant memcached
+apt update \
+    && apt install -y python3-attr \
+    && apt install -y authentic2-multitenant memcached
 
 # CONFIGURE MODULES
 mkdir -p /etc/authentic2-multitenant/settings.d/
