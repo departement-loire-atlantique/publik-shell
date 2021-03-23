@@ -80,6 +80,7 @@ while (( "$#" )); do
       shift
       ;;
     -g|--generate-apt-preferences)
+      DO_LOG="1"
       DO_PREF="1"
       shift
       ;;
